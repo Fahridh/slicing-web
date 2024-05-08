@@ -1,0 +1,1581 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.content-image img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 588px;
+  height: 650px;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .navbar {
+    display: flex;
+
+    justify-content: space-between;
+    padding: 10px;
+    top: 0px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 149px;
+    height: auto;
+  }
+
+  .logoImg {
+    display: flex;
+    width: 35px;
+    height: 36px;
+    object-fit: contain;
+    padding-right: 10px;
+  }
+
+  .logo-text {
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b132a;
+  }
+
+  .logo-name {
+    font-weight: 400;
+  }
+
+  .nav-list {
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #f9f9f9;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav-list.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-toggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .content-image img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 266.86px;
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .content-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-text h1 {
+    margin-top: 30px;
+    font-size: 28px;
+    font-family: Rubik;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    color: #0b132a;
+  }
+
+  .content-text p1 {
+    font-size: 16px;
+    color: #4f5665;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: Rubik;
+  }
+
+  .getStarted {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 250px;
+    height: 60px;
+    align-items: center;
+    font-family: Rubik;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 24px;
+    font: 700 16px/1.56 "Rubik", sans-serif;
+    border: none;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .GetOnIphoneButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 9px;
+    padding: 8px 52px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: 500;
+    background: none;
+    cursor: pointer;
+    width: 250px;
+    margin-bottom: 35px;
+  }
+
+  .iphone-icon {
+    width: 30px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .iphoneText {
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: bold;
+    font-family: Rubik;
+  }
+
+  .GetOnAndroidButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    background: none;
+    color: #0b132a;
+    font-weight: 500;
+    padding: 8px 48px;
+    margin-bottom: 50px;
+  }
+
+  .android-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    align-self: start;
+  }
+
+  .androidText {
+    font-family: Rubik;
+    flex-grow: 1;
+    font-weight: bold;
+    margin: auto 0;
+  }
+
+  .section-2 {
+    padding: 10px;
+  }
+
+  .security-image img {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .description h2 {
+    margin-top: 0px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #0b132a;
+    font-family: DM Sans;
+    text-align: center;
+    margin: auto;
+  }
+
+  .description p2 {
+    font-size: 18px;
+    color: #4f5665;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-family: Rubik;
+    margin: auto;
+    text-align: center;
+  }
+
+  .section-2 .learn {
+    margin-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    color: #080047;
+    font-weight: bold;
+    font-family: DM Sans;
+    margin-bottom: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .learnMore-icon {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+  }
+
+  .content-left {
+    text-align: center;
+  }
+
+  .content-left .startSaving {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 194px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 24px;
+    font: 700 16px Rubik;
+    border: none;
+    cursor: pointer;
+  }
+
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .content-right .automatedSavings {
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    display: flex;
+    margin: 0 auto;
+    width: 326px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #080047;
+    font-weight: bold;
+    padding: 18px 0px 30px 22px;
+  }
+
+  .automatedSavings .Title {
+    margin-top: 20px;
+  }
+
+  .automatedSavings .Description {
+    margin-top: 30px;
+  }
+
+  .automatedSavings .Label {
+    margin-top: 50px;
+  }
+
+  .automatedSavings .Container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .content-left h3 {
+    margin-top: 20px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #000000;
+    font-family: DM Sans;
+    font-weight: bold;
+  }
+
+  .content-left p4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #080047;
+    margin-bottom: 45px;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-family: DM Sans;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .content-left .startSaving {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 194px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 24px;
+    font: 700 16px Rubik;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+}
+
+.savings-icon {
+  width: 50px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.savingsTitle {
+  margin-top: 23px;
+  font: 26px DM Sans;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.savingsDescription {
+  font: 16px DM Sans;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #080047;
+  text-align: left;
+}
+
+.piggybankContainer {
+  display: flex;
+  margin-top: 94px;
+  gap: 16px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.piggybank-icon {
+  width: 28px;
+}
+
+.piggybankLabel {
+  font-family: DM Sans;
+  flex-grow: 1;
+  flex-basis: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fixedSavings {
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin: 0 auto;
+  width: 326px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #080047;
+  font-weight: 700;
+  padding: 18px 0px 30px 22px;
+  margin-bottom: 70px;
+}
+
+.fixedSavings-icon {
+  width: 50px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.fixedSavingsTitle {
+  margin-top: 23px;
+  font: 26px DM Sans;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.fixedSavingsDescription {
+  font: 16px DM Sans;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #080047;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.savelockContainer {
+  display: flex;
+  margin-top: 94px;
+  gap: 16px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.savelock-icon {
+  width: 28px;
+}
+
+.savelockLabel {
+  font-size: 20px;
+  font-family: DM Sans;
+  flex-grow: 1;
+  flex-basis: auto;
+  font-weight: bold;
+}
+
+.orientedSavings {
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin: 0 auto;
+  width: 326px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #080047;
+  font-weight: 700;
+  padding: 18px 0px 30px 22px;
+  margin-bottom: 70px;
+}
+
+.orientedSavings-icon {
+  width: 50px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.orientedsavingsTitle {
+  margin-top: 23px;
+  font: 26px DM Sans;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.orientedsavingsDescription {
+  font: 16px DM Sans;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #080047;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.orientedsavingsPiggybank {
+  display: flex;
+  margin-top: 94px;
+  gap: 16px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.orientedPiggybank-icon {
+  width: 28px;
+}
+
+.orientedsavingspiggybankLabel {
+  font-size: 20px;
+  font-family: DM Sans;
+  flex-grow: 1;
+  flex-basis: auto;
+  font-weight: bold;
+}
+
+.redfixedSavings {
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin: 0 auto;
+  width: 326px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #080047;
+  font-weight: 700;
+  padding: 18px 0px 30px 22px;
+  margin-bottom: 70px;
+}
+
+.redfixedSavings-icon {
+  width: 50px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.redfixedSavingsTitle {
+  margin-top: 23px;
+  font: 26px DM Sans;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.redfixedSavingsDescription {
+  font: 16px DM Sans;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #080047;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.redsavelockContainer {
+  display: flex;
+  margin-top: 94px;
+  gap: 16px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.redsavelock-icon {
+  width: 28px;
+}
+
+.redsavelockLabel {
+  font-size: 20px;
+  font-family: DM Sans;
+  flex-grow: 1;
+  flex-basis: auto;
+  font-weight: bold;
+}
+
+.phone-image img {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: auto;
+  padding-top: 30px;
+  margin-bottom: 70px;
+}
+
+.ads-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discount-badge {
+  text-align: center;
+  border-radius: 30px;
+  background-color: #fee9e9;
+  color: #f53838;
+  padding: 14px 25px;
+  font: 20px DM Sans;
+  font-weight: bold;
+
+}
+
+.discount-badge-container {
+  margin-bottom: 30px;
+}
+
+.investmentOpportunities {
+  display: flex;
+  margin: 0 auto;
+  width: 326px;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.investmentTitle {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  color: #080047;
+  width: 100%;
+  font: 36px DM Sans;
+  font-weight: bold;
+}
+
+.investmentDescription {
+  text-align: left;
+  color: #000;
+  margin-top: 40px;
+  font: 15px DM Sans;
+  font-weight: bold;
+}
+
+.learnMore {
+  display: flex;
+  margin-top: 20px;
+  gap: 5px;
+  font-size: 18px;
+  color: #f53838;
+  padding: 0 2px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.learnmoreLink {
+  font-family: DM Sans;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.arrow-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.saverSpotlight {
+  display: flex;
+  margin: 0 auto;
+  width: 420px;
+  flex-direction: column;
+  color: #fff;
+}
+
+.saverspotlightContent {
+  background-color: #2469b2;
+  padding: 5px 40px;
+}
+
+.saverspotlightTitle {
+  font: 40px DM Sans;
+  text-align: left;
+  font-weight: bold;
+}
+
+.saverspotlightDescription {
+  margin-top: 57px;
+  font: 21px DM Sans;
+  text-align: left;
+  font-weight: bold;
+}
+
+.saverspotlightSaver {
+  display: flex;
+  margin-top: 46px;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.saverspotlightArrow {
+  width: 28px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 40px;
+}
+
+.saverTohbad {
+  font-family: DM Sans;
+  font-weight: bold;
+}
+
+.saverspotlightImage {
+  width: 100%;
+  aspect-ratio: 1.37;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 40px;
+}
+
+.customer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback {
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+.totalCustomer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalCustomer #customerTitle {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+  font-family: DM Sans;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1.5;
+  color: #0b132a;
+  margin-bottom: 20px;
+}
+
+.customerDescription {
+  margin: 0 auto;
+  font-size: 19px;
+  font-family: DM Sans;
+  font-weight: bold;
+  color: #000;
+  text-align: justify;
+  align-items: center;
+  line-height: 1.5;
+  width: 600px;
+}
+
+.apps {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.apps .header {
+  display: flex;
+  align-self: center;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apps .main-content {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  margin-top: 27px;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+
+  background-color: #f8f8f8;
+  color: #4f5665;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.875;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 25px 65px 80px;
+  width: 100%;
+  text-align: left;
+}
+
+.footer-section-title {
+  color: #0b132a;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.67;
+  margin-top: 65px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-link {
+  margin-top: 12px;
+}
+
+.footer-logo {
+  align-items: center;
+  color: #0b132a;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  gap: 10px;
+  margin-top: 78px;
+}
+
+.footer-logo img {
+  aspect-ratio: 0.97;
+  object-fit: contain;
+  width: 35px;
+}
+
+.footer-description {
+  line-height: 30px;
+  margin-top: 29px;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  fill: #fff;
+}
+
+.footer-copyright {
+  color: #afb5c0;
+  line-height: 30px;
+  margin-top: 39px;
+  text-align: left;
+}
+
+.textlaslesBold {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    
+    height: 100vh;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 149px;
+    height: auto;
+  }
+
+  .logoImg {
+    display: flex;
+    width: 35px;
+    height: 36px;
+    object-fit: contain;
+    padding-right: 10px;
+  }
+
+  .logo-name {
+    font-weight: 400;
+  }
+
+  .logo-text {
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b132a;
+  }
+
+  .navbar {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    padding: 10px;
+    top: 0px;
+  }
+
+  .section-1 {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-image img {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-text h1 {
+    margin-top: 30px;
+    font-size: 64px;
+    font-family: Rubik;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    color: #0b132a;
+  }
+
+  .content-text p1 {
+    font-size: 18px;
+    color: #4f5665;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: Rubik;
+  }
+
+  .content-text .getStarted {
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 250px;
+    height: 60px;
+    align-items: center;
+    font-family: Rubik;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 24px;
+    font: 700 16px/1.56 "Rubik", sans-serif;
+    border: none;
+    margin-top: 30px;
+  }
+
+  .button-apps {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: start;
+    margin-top: 30px;
+  }
+
+  .GetOnIphoneButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 20px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: 500;
+    background: none;
+    cursor: pointer;
+  }
+
+  .iphone-icon {
+    width: 30px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .iphoneText {
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: bold;
+    font-family: Rubik;
+  }
+
+  .GetOnAndroidButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    background: none;
+    color: #0b132a;
+    font-weight: 500;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+
+  .android-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    align-self: start;
+  }
+
+  .androidText {
+    font-family: Rubik;
+    flex-grow: 1;
+    font-weight: bold;
+    margin: auto 0;
+  }
+
+  .section-2 {
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .description h2 {
+    display: flex;
+
+    width: 100vh;
+    margin-top: 0px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #0b132a;
+    font-family: DM Sans;
+  }
+
+  .description p2 {
+    font-size: 18px;
+    color: #4f5665;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-family: Rubik;
+  }
+
+  .description .learn {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    color: #080047;
+    font-weight: bold;
+    font-family: DM Sans;
+    margin-bottom: 40px;
+  }
+
+  .section-3 {
+    gap: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-left h3 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #000000;
+    font-family: DM Sans;
+    font-weight: bold;
+  }
+
+  .content-left p4 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #080047;
+    line-height: 1.5;
+    font-family: DM Sans;
+  }
+
+  .content-left .startSaving {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 194px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    padding: 12px 24px;
+    font: 700 16px Rubik;
+    border: none;
+    cursor: pointer;
+  }
+
+  .content-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .content-right .automatedSavings {
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    display: flex;
+    margin: 0 auto;
+    width: 326px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #080047;
+    font-weight: bold;
+    padding: 18px 0px 30px 22px;
+  }
+
+  .automatedSavings .Title {
+    margin-top: 20px;
+  }
+
+  .automatedSavings .Description {
+    margin-top: 30px;
+  }
+
+  .automatedSavings .Label {
+    margin-top: 50px;
+  }
+
+  .automatedSavings .Container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-text h1 {
+    margin-top: 30px;
+    font-size: 28px;
+    font-family: Rubik;
+    margin-bottom: 0px;
+    line-height: 1.5;
+    color: #0b132a;
+  }
+
+  .content-text .getStarted {
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 250px;
+    height: 60px;
+    align-items: center;
+    font-family: Rubik;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 24px;
+    font: 700 16px/1.56 "Rubik", sans-serif;
+    border: none;
+  }
+
+  .content-text {
+    font-size: 16px;
+    color: #4f5665;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: Rubik;
+  }
+  
+  .section-4 {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 80px;
+  }
+
+  .discount-badge {
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    border-radius: 30px;
+    background-color: #fee9e9;
+    color: #f53838;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    font: 20px DM Sans;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .investmentTitle {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    color: #080047;
+    width: 100%;
+    font: 36px DM Sans;
+    font-weight: bold;
+  }
+
+  .investmentDescription {
+    text-align: left;
+    color: #000;
+    margin-top: 40px;
+    font: 15px DM Sans;
+    font-weight: bold;
+  }
+
+  .learnMore {
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+    font-size: 18px;
+    color: #f53838;
+    padding: 0 2px;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  .learnmoreLink {
+    font-family: DM Sans;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .section-5 {
+    display: flex;
+  }
+
+  .saverSpotlight {
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+  }
+
+  .saverspotlightContent {
+    background-color: #2469b2;
+    padding: 0px 40px;
+    height: 100%;
+  }
+
+  .saverspotlightTitle {
+    font: 40px DM Sans;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .saverspotlightDescription {
+    margin-top: 57px;
+    font: 21px DM Sans;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .saverspotlightSaver {
+    display: flex;
+    margin-top: 46px;
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .saverspotlightArrow {
+    width: 28px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 40px;
+  }
+
+  .saverTohbad {
+    font-family: DM Sans;
+    font-weight: bold;
+  }
+
+  .saverspotlightImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-6 {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .customer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    width: 700px;
+    margin-bottom: 30px
+  }
+
+  .feedback {
+    width: 50%;
+  }
+
+  .totalCustomer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #customerTitle {
+    margin-top: 30px;
+    font-size: 36px;
+    font-family: DM Sans;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #0b132a;
+  }
+
+  .totalCustomer .customerDescription {
+    margin: 0 auto;
+    font-size: 19px;
+    font-family: DM Sans;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .apps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .apps .header {
+    display: flex;
+
+    gap: 90px;
+    align-items: center;
+  }
+
+  .apps .main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    margin: 0;
+    align-items: center;
+  }
+
+  .apps .header img {
+    width: 120px;
+  }
+
+  .apps .main-content img {
+    width: 120px;
+  }
+
+  .getStarted {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #f53838;
+    width: 250px;
+    height: 60px;
+    align-items: center;
+    font-family: Rubik;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px 24px;
+    font: 700 16px/1.56 "Rubik", sans-serif;
+    border: none;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .GetOnIphoneButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 52px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: 500;
+    background: none;
+    cursor: pointer;
+    width: 250px;
+  }
+
+  .iphone-icon {
+    width: 30px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .iphoneText {
+    font-size: 16px;
+    color: #0b132a;
+    font-weight: bold;
+    font-family: Rubik;
+  }
+
+  .GetOnAndroidButton {
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid rgba(11, 19, 42, 1);
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    background: none;
+    color: #0b132a;
+    font-weight: 500;
+    padding: 8px 48px;
+  }
+
+  .android-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    align-self: start;
+  }
+
+  .androidText {
+    font-family: Rubik;
+    flex-grow: 1;
+    font-weight: bold;
+    margin: auto 0;
+  }
+
+  .get-container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .footer {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    color: #4f5665;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.875;
+    padding: 25px 65px 80px;
+    max-width: none;
+    width: auto;
+    text-align: left;
+  }
+
+  .footer-section-title {
+    color: #0b132a;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.67;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    text-align: left;
+
+  }
+
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .footer-logo-container .icon-container {
+    display: flex;
+  }
+
+  .footer-link {
+    margin-top: 12px;
+  }
+
+  .footer-logo {
+    align-items: center;
+    color: #0b132a;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 10px;
+    margin-top: 78px;
+  }
+
+  .footer-logo img {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    width: 35px;
+  }
+
+  .footer-description {
+    line-height: 30px;
+    margin-top: 29px;
+  }
+
+  .category-container {
+    display: flex;
+    gap: 100px;
+  }
+}
